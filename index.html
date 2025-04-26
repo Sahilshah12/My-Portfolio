@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sahil Sahu - Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #fff;
+            background: #1A1F2C;
+        }
+
+        /* Navbar Styles */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 1rem;
+            z-index: 1000;
+        }
+
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: #8B5CF6;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #8B5CF6;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        .hero h2 {
+            font-size: 1.5rem;
+            color: #D6BCFA;
+            margin-bottom: 1.5rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 0.5rem 1rem;
+            border: 2px solid #8B5CF6;
+            border-radius: 5px;
+            color: #fff;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .btn:hover {
+            background: #8B5CF6;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 5rem 2rem;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            color: #8B5CF6;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        /* About Section */
+        .about-content {
+            background: #403E43;
+            padding: 2rem;
+            border-radius: 10px;
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-card {
+            background: #403E43;
+            padding: 1.5rem;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Projects Section */
+        .project-card {
+            background: #403E43;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 2rem;
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .project-content {
+            padding: 1.5rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero h2 {
+                font-size: 1.2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="#" class="logo">Sahil Sahu</a>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#certificates">Certificates</a>
+                <a href="#education">Education</a>
+                <a href="#cv">CV</a>
+
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2 style="color: #0EA5E9;">Welcome to my portfolio! </h2><br>
+            <img src="ssahil.jpg" style="border-radius: 50%; width: 300px; height: 300px;"/>
+            <h1>Sahil Sahu</h1>
+            <h2>Motivated CSE Undergrad | Full-Stack Web Development</h2>
+            <div class="social-links">
+                <a href="https://github.com/" class="btn" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/feed/" class="btn" target="_blank">LinkedIn</a>
+                <a href="mailto:sahilshah8219@gmail.com" class="btn">Email</a>
+                <a href="tel:+91-8219120914" class="btn">Phone</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <h3 style="color: #D946EF; font-size: 1.5rem; margin-bottom: 1rem;">Sahil Sahu</h3>
+                <p style="color: #0EA5E9; margin-bottom: 1rem;">Motivated CSE Undergrad | 3rd Year B.Tech Student | Passionate About Full-Stack Web Development</p>
+                <p style="color: #D6BCFA; margin-bottom: 1rem;">
+                    
+                    With a strong foundation in front-end and quite good in back-end development, 
+                    I'm eager to contribute to impactful projects and continue growing in this exciting field.
+                    
+
+
+                </p>
+
+                <p style="color: #F97316;">
+                    Aspiring Software Engineer with expertise in full-stack development, problem-solving, and algorithmic optimization.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="education">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="skill-card">
+                <p style="color: #F97316;">Lovely Professional University, Phagwara, Punjab</p>
+            </br>
+                <p style="color: #F97316;">B.Tech in Computer Science and Engineering (Aug 2022 – Present)</p>
+                <p style="color: #F97316;">CGPA: 6.54</p>
+            </br>
+                <p style="color: #F97316;">St. Xavier's School, Dharahara, Ballia, Uttar Pradesh</p>
+            </br>
+                <p style="color: #F97316;">Intermediate (PCM) (Mar 2021 – May 2022)</p>
+                <p style="color: #F97316;">Percentage: 78%</p>
+                <p style="color: #F97316;">Matriculation (Mar 2019 – Mar 2020)</p>
+                <p style="color: #F97316;">Percentage: 82%</p>
+             
+            </div>
+        </div>
+    </section>
+    
+
+
+
+
+
+
+
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3 style="color: #D946EF; margin-bottom: 1rem;">Programming Languages</h3>
+                    <ul style="color: #F97316; list-style-position: inside;">
+                        <li>C++</li>
+                        <li>JavaScript</li>
+                        <li>C</li>
+                        <li>Java</li>
+                        <li>PHP</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3 style="color: #D946EF; margin-bottom: 1rem;">Frameworks & Tools</h3>
+                    <ul style="color: #F97316; list-style-position: inside;">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>VS Code</li>
+                        <li>Git</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3 style="color: #D946EF; margin-bottom: 1rem;">Soft Skills</h3>
+                    <ul style="color: #F97316; list-style-position: inside;">
+                        <li>Problem-Solving Skills</li>
+                        <li>Team Player</li>
+                        <li>Project Management</li>
+                        <li>Adaptability</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <div class="container">
+            <h2 class="section-title">Experience and Internships</h2>
+            <div class="skill-card">
+                <h3 style="color: #D946EF; margin-bottom: 0.5rem;">Cipher Schools</h3>
+                <p style="color: #F97316; margin-bottom: 1rem;">May 2024 – Aug 2024</p>
+                <p style="color: #D6BCFA; margin-bottom: 1rem;">C++ & Data Structure Internship focused on developing C++ applications and enhancing data structure proficiency.</p>
+                <li>During My internship, I developed a Project - Binary Search Tree </li>
+                <li>In this project, I implemented various algorithms to enhance its efficiency and optimize performance.</li>
+                <li>Implemented traversal algorithms for efficient data retrieval.</li>
+                <li>Created a user-friendly interface for visualizing tree operations.</li>
+            </div>
+            <div class="skill-card">
+                <h3 style="color: #D946EF; margin-bottom: 0.5rem;">Care Faundation : A Culture of Caring</h3>
+                <h1 style="color: #D946EF; margin-bottom: 0.5rem;">NITI AAYOG DARPAN</h1>
+                <p style="color: #F97316; margin-bottom: 1rem;">Jan 2024 – Mar 2024</p>
+                <p style="color: #D6BCFA; margin-bottom: 1rem;">Community Development Project on Environmental Conservation and Studies</p>
+                <ul style="color: #F97316; list-style-position: inside;">
+                    <li>Led initiatives on environmental awareness</li>
+                    <li>Conducted sustainability research</li>
+                    <li>Organized community programs</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="project-card">
+                <img src="leather1.png" alt="Leather website" style="width: 320px; height: 250px; margin-right: 1px;">
+                <img src="leather2.png" alt="Leather website" style="width: 320px; height: 250px; margin-right: 1px;">
+                <img src="leather3.png" alt="Leather website" style="width: 340px; height: 250px;">
+                <div class="project-content">
+                    <h3 style="color: #D946EF; margin-bottom: 1rem;">Leather website</h3>
+                    <p style="color: #F97316;">
+                        Designed and developed a custom e-commerce website for handcrafted leather products.<br>
+                        Frontend: Created a responsive, user-friendly interface using React and JavaScript.<br>
+                        Backend: Developed a secure and scalable API with Laravel for managing products, orders, and users.<br>
+                        Features: Dynamic product listings, custom order forms, user authentication, and payment integration.<br>
+                        Focus: Smooth user experience, mobile optimization, and modern design aesthetics.
+                    </p> 
+                </br>
+                    <p style="color: #F97316;">Tools Used: VS Code, git, data-base</p>
+                    <p style="color: #F97316;">Technologies: React for front-end, Laravel for back-end, JavaScript</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="bh.png" alt="Sudoku Solver">
+                <div class="project-content">
+                    <h3 style="color: #D946EF; margin-bottom: 1rem;">Sudoku Solver</h3>
+                    <p style="color: #F97316;">Description: Developed a Sudoku Solver using C++ that verifies and solves Sudoku puzzles by checking whether the given elements adhere to standard Sudoku
+                        rules. Implemented efficient logic to ensure that each row, column, and 9×9 subgrid contains unique numbers without repetition. Optimized the solver to process
+                        puzzles 30% faster and designed a console-based interface allowing users to input custom grids for instant validation and solutions..</p>
+                    </br>
+                    <p style="color: #F97316;">Tools Used: Dev C++, VS Code, GitHub</p>
+                    <p style="color: #F97316;">Technologies: C++, Data Structures & Algorithms</p>
+                </div>        
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certificates">
+        <div class="container">
+            <h2 class="section-title">Certificates</h2>
+            <img src="dsa-cipher.jpg" alt="Leather website" style="width: 290px; height: 250px; margin-right: 15px;">
+            <img src="kotlin Certificate.png" alt="Leather website" style="width: 290px; height: 250px; margin-right: 15px;">
+            <img src="Coursera Networking.jpg" alt="Leather website" style="width: 290px; height: 250px;">
+            
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3 style="color: #D946EF; margin-bottom: 1rem;">Web Development</h3>
+                    <ul style="color: #F97316; list-style-position: inside;">
+                        <li>CPP & Data Structure & Algorithm – Cipher Schools</li>
+                        <li>Programming Fundamental in Kotlin – Coursera</li>
+                        <li>Computer Network – Coursera</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3 style="color: #D946EF; margin-bottom: 1rem;">Programming</h3>
+                    <ul style="color: #F97316; list-style-position: inside;">
+                        <li>C++ Basic Structures: Vectors, Pointers, Strings, and Files – Coursera</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cv">
+        <div class="container">
+            <h2 class="section-title">Curriculum Vitae (CV)</h2>
+            <div class="skill-card" style="text-align: center;">
+                <!-- Embed your CV for viewing -->
+                <iframe src="SahilCV2.pdf" style="width:100%; height:600px; border: none; border-radius: 10px;"></iframe>
+                
+                <!-- Button to download CV -->
+                <br><br>
+                <a href="SahilCV2.pdf" download class="btn" style="margin-top: 1rem;">Download My CV</a>
+            </div>
+        </div>
+    </section>
+    
+</body>
+</html>
